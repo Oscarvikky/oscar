@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="football()">oscar</button>
+    <div id="n1"></div>
+    <div id="n2"></div>
+    <div id="n3"></div>
+    <div id="n4"></div>
+    <div id="n5"></div>
+    <div id="n6"></div>
+
+
+
+<script>
+     let n1 = document.getElementById("n1")
+     let n2 = document.getElementById("n2")
+     let n3 = document.getElementById("n3")
+     let n4 = document.getElementById("n4")
+     let n5 = document.getElementById("n5")
+     let n6 = document.getElementById("n6")
+
+
+    function  football(){
+        let sent = prompt("come home boy")
+        let u = sent 
+        n1.innerHTML = `the string u enter is ${sent}`
+        const lenght = sent.length
+        let y = `the length of the string is ${length}`
+        n2.innerHTML = y;
+       const bv = sent.toLowerCase()
+       n3.innerHTML = bv
+       let bb = sent.toUpperCase()
+       n4.innerHTML = bb
+
+    }
+</script>
+</body>
+</html>

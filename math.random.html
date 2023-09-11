@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <input type="text" id="d">
+      <button onclick="talk()">check</button>
+      <button onclick="interclear()">clear</button>
+</body>
+<script>
+    console.log(Math.floor(Math.random()* 100));
+    let a = Math.floor( (Math.random()* 100));
+    console.log(a)
+    let d = document.getElementById("d")
+    d.value
+
+    function talk(){
+        if (d.value == a){
+            alert('its a match');
+        }else{
+              alert ('not');
+        }
+    };
+
+    setTimeout(()=>{
+        alert ('you are late')
+    },3000);
+
+     let thelog = setInterval(()=>{
+        console.log("something");
+        console.log("line2");
+    }, 2000)
+
+    function interclear(){
+        clearInterval(thelog)
+    }
+
+</script>
+</html>

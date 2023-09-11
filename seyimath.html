@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+      height: 50px;
+      width: 400px;
+      padding: 0 10px;
+    }
+    button {
+      padding: 20px 40px;
+    }
+    #timeShow {
+      font-size: 64px;
+    }
+  </style>
+<body>
+ 
+    <h1>Guess a number between 1-10</h1> <br />
+    <input id="userIn" type="text" />
+    <button id="check">Check</button>
+    <br />
+    <div id="show"></div>
+    <br />
+    <input id="number" type="text" />
+    <button id="startCount">Count Down</button>
+    <div id="timeShow"></div>
+</body>
+<script>
+    //math.random
+    const randomNum = Math.round(Math.random() * 10 + 1);
+    const userIn = document.getElementById("userIn");
+    const check = document.getElementById("check");
+    const show = document.getElementById("show");
+  
+    const timeShow = document.getElementById("timeShow");
+    const number = document.getElementById("number");
+    const startCount = document.getElementById("startCount");
+    let counter;
+  
+    startCount.addEventListener("click", () => {
+  
+      if (Number(number.value) > 0) {
+        counter = setInterval(() => {
+          number.value--;
+          timeShow.innerHTML = number.value;
+  
+          if (Number(number.value) === 0) {
+            clearInterval(counter);
+          }
+        }, 1000);
+      }
+    });
+  
+    check.addEventListener("click", () => {
+      userIn.value == randomNum
+        ? (show.innerHTML = `Correct`)
+        : (show.innerHTML = `Wrong`);
+    });
+  
+    console.log(randomNum);
+  
+    // setTimeout(()=>{
+    //     alert('You delayed me')
+    // }, 4000)
+  
+    // setInterval(()=>{
+    //     console.log(randomNum)
+    // }, 1000)
+  </script>
+</html>

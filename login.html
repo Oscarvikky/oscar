@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/5f80576e58.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    #bb{
+        width: 250px;
+        height: 30px;
+        background-color: aqua;
+        color: black;
+        border: 0;
+        border-radius: 6px;
+
+    }
+    #b{
+        width: 250px;
+        height: 30px;
+        background-color: aqua;
+        color: black;
+        border: 0;
+        border-radius: 6px;
+
+    }
+    #btn{width: 100px;
+    height: 40px;
+    background-color: #430ef4;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    }
+    
+</style>
+<body>
+    <form action="">
+        <input id="username" type="text" placeholder="username"> <br><br>
+        <input id="email" type="text" placeholder="email"><br><br>
+       <div class="dd"> <input id="password" type="password" placeholder="password"> <button type="button" onclick="showpass()"><i class="fa-regular fa-eye"></i></button></div><br><br>
+        <input id="confirmed" type="password" placeholder="confirm password"> <button type="button" onclick="showpasss()"><i class="fa-regular fa-eye"></i></button><br><br>
+        <button type="button" onclick="deny()">Register</button>
+
+    </form>
+<br><br>
+<br><br>
+<br>
+
+    <form action="">
+        <label  for="bb">USERNAME</label><br>
+        <input  id="bb" type="text"> <br><br>
+        <label for="b">PASSWORD</label> <br>
+        <input  id="b" type="password"><br><br>
+        <button id="btn" type="button" onclick="beaa()">Login</button>
+    </form>
+
+
+</body>
+     <script>
+         let username = document.getElementById("username");
+         let email = document.getElementById("email");
+         let password = document.getElementById("password");
+         let confirmed = document.getElementById("confirmed");
+
+         function showpass(){
+            password.type == "password"? password.type = "text" : password.type = "password"
+         }
+
+         function showpasss(){
+            confirmed.type == "password"? confirmed.type = "text" : confirmed.type = "password"
+         }
+        
+         function deny(){
+             if(username.value == "" || email.value =="" || password.value == ""){
+                alert("field cannot be empty")
+            }else if(password.value !== confirmed.value){
+                alert("password does not match")
+            }else if(password.value.length < 8 ){
+                alert("less xharater")
+            }else{
+                alert("succ")
+            }
+         }
+
+
+         
+
+         let free = [
+            {username: "benson", password:"godspower"},
+            {username: "oscar", password:"godspower1"},
+            {username: "lansy", password:"godspower2"},
+            {username: "paul", password:"godspower3"},
+            {username: "dan", password:"godspower4"}
+         ]
+         let cat = JSON.stringify(free);
+         localStorage.setItem("free", cat);
+         console.log(cat);
+
+         function beaa(){
+         let getuser = JSON.parse(localStorage.getItem('free'));
+         let b = document.getElementById("b").value;
+         let bb = document.getElementById("bb").value;
+        
+
+            let founduser = getuser.find(user=> user.username === bb);
+            let mpass = getuser.find(user => user.password === b);
+            if(founduser && mpass){
+                alert ("login succesful👍👍👍🤸‍♂️🤸‍♂️🤸‍♂️🤸‍♂️🤸‍♂️🤸‍♂️")
+            }else{
+                alert('login failed😭👹👹👹👹')
+            }
+
+         }
+
+     </script>
+</html>

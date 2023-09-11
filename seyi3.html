@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 1s ease-in-out;
+    }
+    #mode{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: black;
+        color: #fff;
+        border: 0;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 1s ease-in-out;
+    }
+    #caroBtn{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: black;
+        color: #fff;
+        border: 0;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 1s ease-in-out;
+    }
+    .btn{
+        padding: 16px 32px;
+        border-radius: 6px;
+        border: 0;
+        cursor: pointer;
+        width: 100% !important;
+    }
+    p{
+        font-size: 52px;
+        font-weight: 600;
+    }
+    form{
+        width: 40% !important;
+        height: 500px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 16px;
+        border-radius: 6px;
+        padding: 10px;
+        border: 1px solid lightgray;
+    }
+    i{
+        position: absolute;
+        right: 16px;
+        bottom: 30%;
+    }
+    @media only screen and (max-width: 1000px){
+        form{
+            width: 100% !important;
+        }
+    }
+</style>
+<body>
+    <body class="pt-5 mt-3">
+        <p>Hi, Mr Daniel</p>
+        <a href="array.html"><button id="caroBtn">Carousel</button></a>
+        <button id="mode">Switch Mode</button>
+        <br>
+        <form class="container">
+            <h1 class="pb-3">Register Here</h1>
+            <label for="userName">Username:</label>
+            <input id="userName" type="text"> <br>
+            <label for="email">Email:</label>
+            <input id="email" type="email"> <br>
+            <div class="position-relative">
+                <label for="password">Password:</label>
+                <input id="password" type="password">
+                <i onclick="eye()" class="bi bi-eye"></i>
+            </div>
+            <div class="position-relative">
+                <label for="confirmPass">Confirm Password:</label>
+                <input id="confirmPass" type="password">    
+                <i onclick="eye2()" class="bi bi-eye"></i>
+            </div>
+            <button id="regBtn" type="button" class="btn btn-primary">Register</button>
+        </form>
+    
+    
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+          crossorigin="anonymous"
+        ></script>
+       
+</body>
+<script src="sy.js"></script>
+</html>

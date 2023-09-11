@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var userName = "TestRam";
+       let email = "testram24@gmail.com";
+       const g = 9.8;
+       console.log(userName)
+
+       userName ="Nobelium24";
+       console.log(userName)
+
+       email = "ogunbaja24@gmail.com"
+       console.log(email)
+
+       email ="ogunbaja24@gmail.com"
+       console.log(email)
+
+       var password;
+       password =123456;
+       console.log(password)
+
+       let isSingle;
+       isSingle = true;
+       console.log(isSingle)
+
+       const planckconstant = 6.62607004-34
+
+       // Data types in javascript
+       // strings in javascript
+       let firstName = "Testram";
+       let greetings = 'welcome to JS class, "Nobelium24"';
+       console.log(greetings)
+       let password2 ='testRam24';
+       //concatentation in javascript
+       let name = "Adewole";
+       let age = 1111;
+       let introduction = "My name is"  + "and i am" + age + "years old";
+       console.log(introduction);
+       let introduction2 = `My name is ${name} and I am ${age} years old`;
+       //numbers in javascript
+       let age2 =23;
+       let price=23.45;
+       let temperature=-23;
+       let test = "23";
+    //    test = number(test);,,,;;
+       console.log(typeof test)
+
+       //arrays in javascript
+       const clubs = ["chelse", "arsenal", "real madrid"];
+       console.log(clubs[0])
+
+       //objects in javascript
+       let details = {
+        name: "Adewole",
+        age: 23,
+        isSingle: true,
+        clubs: ["chelsea", "arsenal", "real madrid", "barcelona",],
+        address: {
+            street: "No 1, TestRam Street",
+            city: "lagos",
+            state: "Nigeria"
+        }
+       };
+
+       //boolean rin javascript
+       let earthisflat = false;
+       let earthisround = true;
+
+       //undefined in javascript
+       let test3 = null;
+
+       // operators in js
+       // arithmetic operators
+       // addition operator
+       console.log(30 + 15);
+
+       // substraction operator
+       console.log(30 - 15);
+       
+       // multiplication operator
+       console.log(30 * 15);
+
+       //division operator
+       console.log(30 / 15);
+
+       //modulus operator
+       // return the reminder of a division operation
+       console.log(30  % 15);
+
+       //exponentiation operator
+       //returns the result of raising the first operand pf the power of the second operand 
+       console.log(5 ** 7);
+
+       //increment operator
+       //increase the value of its operand by 1
+       let x = 10;
+       x++;
+       console.log(x);
+
+       //decrement operator
+        //decrease the value of its operand by 1
+        let y = 10;
+        y--;
+        console.log(y)
+
+        //asignment operator
+        let a = 5;
+        let b = 10;
+        console.log(b)
+
+        //Addition assignment 
+        b += a; // we are assingning the value of b +a to b
+        console.log(b);
+
+        //substraction assignment 
+        b -= a; 
+        console.log(b);
+
+        //multiplication ass
+        let c = 5;
+        let d = 15;
+        c *= d;
+        console.log(c);
+
+        // division ass
+        c /= d;
+        console.log(c);
+        //modulus ass
+        d %= c;
+        console.log(d);
+
+        //exponentiation ass
+        let e = 5
+        let f = 2
+        e **= f;
+        console.log(e);
+
+        //comparison operators
+        let k = 10;
+        let h = 20;
+        console.log(g == h); //return true if operand are equal
+
+        let testf = "33";
+        let testf2 = 33;
+        console.log(testf == testf2) // returns true if the operands are equal. it compares only the value
+
+        console.log(testf === testf2); // returns true if the operands are equal and same type. it compares value and data type
+
+        console.log(g != h); // returns if the operands are not equal
+        console.log(testf != testf2); // returns true if the operands are equal. it compares vaule only
+        console.log(testf !== testf2); // returns true if the operands are not equal and of the same type 
+
+        let test4 = "obinna";
+        let test5 = "pelumi";
+        console.log(test4 === test5); // returns true if the left operand is greater than the right operand
+
+        console.log(g > h); // returns true if the left operand is greater than the right operand
+        console.log(g <= h); // 
+
+        //logical operator
+        let i = 10;
+        let j = 20;
+        let t = 30;
+
+        //logical and = &&
+        //logical not = !
+        //logical or = ||
+        console.log(i < j && j > t); // returns true if both operands are true
+        console.log(i < j || j > t); // returns true if one of the operands are true
+        console.log(!(i < j || j > t)); // returns true if the operand is false
+
+        //ternary operator
+        let l = 10;
+        let m = 20;
+        l === m ? alert("yes") : alert("No"); 
+        // what comes after the "?" is what should happen if wat comes before ? is true and wat comes after ":"is wat should happen if come before ? is false
+        
+       // conditonal statement in js
+       // conditional statement are used to carry out certain operation in our programm if certain condition are being met (or not being met)
+
+       let agee = prompt("enter your agee:");
+       let testagee = Number(agee);
+        if (testagee < 13) {
+            alert("you are under age")
+        }else if(testagee < 18){
+            alert("you re not legible to vote")
+        }else if(testagee > 18){
+            alert("you are a legal adult");
+        }
+
+        let day = prompt("enter your day:");
+        let testday = Number(day)
+
+        switch (testday) {
+            case 0:
+                alert("the day is sunday");
+                break
+            case 1:
+                alert("the day is monday")
+                break
+            case 2:
+                alert("the day is tuesday")
+
+
+
+
+
+
+
+        }
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

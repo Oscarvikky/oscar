@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #bb{
+        width: 200px;
+        height: 200px;
+        border: 1px solid lightgray;
+        box-shadow: 8px, 6px, 8px, rgba(0,0,0,0.8);
+    }
+</style>
+<body>
+    <div id="bb"></div>
+    <button onclick="hide()">card</button>
+
+
+
+    <script>
+        let bb = document.getElementById("bb");
+
+        function hide(){
+        //  if (bb.style.display == "none"){
+        //     bb.style.display = "block";
+        //  }else{
+        //     bb.style.display = "none";
+        //  }
+          
+         bb.style.display == "none"? bb.style.display ="block" : bb.style.display = "none"
+        }
+
+
+    </script>
+</body>
+</html>

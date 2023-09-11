@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <style>
+    #div1 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+  </style>
+<body>
+        <input type="text" name="" id="input1">
+        <button onclick="changecolor()">click me</button>
+        <div id="div1"></div>
+      
+
+
+
+
+
+
+    <script>
+      //functions in js
+      function addlum(num1, num2){
+        let addition = num1 + num2;
+        let substraction = num1 - num2;
+        let division = num1 / num2;
+        let multiplication = num1 * num2;
+        let mod = num1 % num2;
+        return [ addition, substraction, division, multiplication, mod]
+
+      }
+       let test = addlum(30, 15);
+       console.log(test)
+
+
+       let input1 = document.getElementById("input1");
+       let div1 = document.getElementById("div1");
+       function changecolor (){
+        let color = input1.value;
+        div1.style.backgroundColor = color;
+        div1.innerHTML = `the background color of this div ${color}`;
+       }
+
+
+
+       //functions are used to make blocks of code 
+
+
+
+       // objects in java 
+       let age = 55;
+       let tet ={
+        name: "testram"
+         
+       }
+
+
+
+
+    </script>
+</body>
+</html>

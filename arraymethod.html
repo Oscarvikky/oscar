@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //array method in js
+        let test = [1, 2, 3, 4, 5, 6, 7, 8, 9 ,0];
+        console.log(test.toString()); // to convert to string
+
+        console.log(test.join("/")); // to give space inbtw text
+
+        const test2 =["banana", "apple", "orange" ,"pineapple", "watermelon",];
+        console.log(test2.pop()); // it helps to remove the last item in the array
+        console.log(test2);
+        console.log(test2.push("strawberry")); // it helps to add sumtin to the last item
+        console.log(test2);
+        test2.shift("banana"); // it remove the first item
+        console.log(test2);
+        test2.unshift("guava") // helps replace the removed first item
+        console.log(test2);
+
+        test2[3] = "pawpaw";  // it help to replace certain index
+        console.log(test2);
+        test2[test2.length] = "fish" // this add item inrespective of d length
+        console.log(test2)
+
+        const test3 = [1, 2, 3, 4, 5]
+        const test4 = [6, 7, 8, 9, 0]
+        const test5 = [11, 12, 13, 14]
+        let test6 = test3.concat(test4, test5)  // help to join arry together 
+        console.log(test6)
+      
+        const test7 = [ "chelsea", "arsenal", "man u", "barca", "madrid", "juv"]
+        const test8 = test7.slice(3) // this starts from index 3 and print all the string after it
+        console.log(test8)
+        const test9 = test7.slice(1, 4) // this first arguement takes index while second take numbber of string u want to include
+        console.log(test9)
+        const test10 = ["blue", "red", "green", "orange", "violet", "white"]
+        test10.splice(2, 1, "pink") // it delete and replace. 1st for index 2nd for how many u want to cut and string for replace
+        console.log(test10)
+
+        const test11 =["beans", "rice", "egg", "bread", "garri",]
+        test11.splice(2, 1) // delete function without replacement 
+        console.log(test11)
+
+        // array and object destructuring in js
+        let test12 = ["semilore", "ademi", "nana", "ben", "sheyi"]
+        let = [semilore, ademi, nana, ben, sheyi] = test12
+        console.log(semilore);
+
+        const ram ={
+            name: "ben",
+            age: 1111,
+            isbae: true,
+            food: "beans",
+            color: "yellow"
+        }
+
+        let {name, age, food, color} = ram
+        console.log(food)
+
+        //spread operators
+
+        let test13 = [1, 2, 3, 4, 5];
+        let test14 = [...test13, 6, 7, 8, 9];
+        console.log(test14);
+
+        let obj1 = {name: "ade", age: 12, color:"black"};
+        let obj2 = {...obj1, issgg: "undefined", club: "arsenal"};
+        console.log(obj2)
+        
+       //array iteration method in js
+
+       const arrr1 = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+       arrr1.forEach((item, index)=>{
+        console.log(item * 3)
+       })
+       let test15 = arrr1.map((item, index)=>{
+        return item * 5
+       })
+       console.log(test15);
+       let test16 = arrr1.filter((item, index)=>{
+        return item % 3 === 0
+       })
+       console.log(test16);
+       
+       let test17 = arrr1.find((item, index)=>{
+        return item % 3 === 0
+       }) 
+       console.log(test17)
+       
+       let test18 = arrr1.reduce((total, item)=>{
+        return total + item
+       }, 0)
+       console.log(test18)
+
+
+
+       const arrr2 = [
+       {name:"test", age:111},
+       {name:"test", age:112},
+       {name:"test", age:113},
+       {name:"test", age:114},
+       {name:"test", age:115},
+       {name:"test", age:116},
+       {name:"test", age:117},
+       {name:"test", age:117},
+       {name:"test", age:118}
+       ]
+let sum = arrr2.reduce((total, item)=>{
+ return total + item.age
+}, 0)
+console.log(sum)
+
+//localstorage in js
+  let testarr = [
+    {name: "testram", age: 1111, color: "grey"},
+    {name: "testram1", age: 1112, color: "blue"},
+    {name: "testram2", age: 1113, color: "green"},
+    {name: "testram3", age: 1114, color: "red"},
+    {name: "testram4", age: 1115, color: "pink"},
+    {name: "testram5", age: 1116, color: "purple"},
+    {name: "testram6", age: 1117, color: "black"}
+  ]
+let stringarr = JSON.stringify(testarr); // to covert object to a string
+localStorage.setItem("testarr", stringarr); // it set the value of a specific storage object(keyname, value)
+let newtest = localStorage.getItem("testarr"); // return value of a specific object (keyname)
+let testarr2 = JSON.parse(newtest); // return a string in object form
+console.log(testarr2);
+
+
+// localStorage.clear()    //   to clear local storage 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

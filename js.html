@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .vv{
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+
+    }
+    
+</style>
+<body>
+    <div class="vv">
+        <input id="vvv" type="text">
+        <button onclick="display()">check</button>
+        <h1 id="bb"></h1>
+    </div>
+
+
+
+    <script>
+          let vvv = document.getElementById("vvv")
+          let bb = document.getElementById("bb")
+          function display(){
+            let text = (vvv.value).toUpperCase()
+            console.log(text)
+            if(text == "december" || text =="november" || text == "january"){
+                bb.innerHTML = ` ${text} this month is hammarttan`
+            }
+
+          }
+           
+          let name = "oscar"
+          console.log(name.length)
+          console.log(name.substr(2, 3))
+          console.log(name.substring(1, 4))
+          console.log(name.split(''))
+          
+          
+
+          
+          
+    </script>
+</body>
+</html>
